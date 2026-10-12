@@ -104,7 +104,7 @@ public class BookingService {
 
 // In Java 8, the method reference operator (::) is a shorthand notation used to refer to an existing method without invoking it. It acts as a more readable and compact alternative to a lambda expression when that lambda does nothing but forward its arguments directly to an existing method.
 
-// @Transactional annotation --> one is from Springframework and another is from jakarta, so you have to use jakarta one because JPA will handle out transaction --> atomicity --> yaad seat book hoo ya toh naa toh (proxy) lagane hai book() pr
+// @Transactional annotation --> one is from Springframework and another is from jakarta, so you have to use jakarta one because JPA will handle out transaction --> atomicity --> yaa seat book hoo ya toh naa toh (proxy) lagane hai book() pr
 
 // Optional Java ka ek container/wrapper class hai jo represent karta hai:
 //"Value hai bhi sakti hai, nahi bhi."

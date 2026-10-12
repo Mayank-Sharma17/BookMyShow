@@ -5,13 +5,13 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class CorsConfig implements WebMvcConfigurer {
+public class CrossConfig implements WebMvcConfigurer {
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        // jitne bhe /api/sabko allow krdo
         registry.addMapping("/api/**")
                 .allowedOriginPatterns("http://localhost:*","http://127.0.0.1:*")
-                .allowedMethods("GET", "POST", "OPTIONS")
+                .allowedMethods("GET","POST","OPTIONS")
                 .allowedHeaders("*");
     }
 }

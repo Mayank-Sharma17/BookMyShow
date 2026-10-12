@@ -202,7 +202,10 @@ async function loadBookingHistory() {
 async function cancelBooking(bookingId) {
     if (!state.profile || !window.confirm("Cancel this booking and release the seats?")) return;
     try {
-        await fetchJson(`/bookings/${bookingId}/cancel?profileId=${state.profile.id}`, { method: "POST" });
+        await fetchJson(`/bookings/${bookingId}/cancel`, { 
+            method: "POST",
+            body: JSON.stringify(state.profile.id),
+        });
         showToast("Booking cancelled and seats released.");
         await loadBookingHistory();
         loadShows();
