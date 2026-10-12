@@ -1,0 +1,16 @@
+package com.cfs.BookMyShowBE.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+import java.util.List;
+
+// java 17 - record (auto constructor, and getter setters)
+
+public record CreateBookingRequest(
+        @NotNull Long profileId,
+        @NotEmpty @Size(max = 8) List<@NotBlank String> seatLabels
+) {
+}
